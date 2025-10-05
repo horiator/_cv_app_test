@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Main Red Ball Tracker (Stabilized)",
+            "type": "debugpy",
+            "request": "launch",
+            
+            // Runs the orchestrator file
+            "program": "${workspaceFolder}/main_tracker.py",
+            
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            
+            // CWD set to the project root (where rgb.avi is expected)
+            "cwd": "${workspaceFolder}",
+            
+            // Path to your virtual environment's Python executable
+            "python": "${workspaceFolder}/.venv/bin/python", 
+            
+            "args": [
+                "--video", 
+                "rgb.avi",         
+                "--buffer", 
+                "100"
+            ]
+        }
+    ]
+}
